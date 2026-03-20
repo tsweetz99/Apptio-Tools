@@ -1,0 +1,74 @@
+[
+  {
+    "displayName": "Production VMs new",
+    "className": "Group",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "logicalOperator": "AND",
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "expVal": "prod.*",
+        "expType": "RXEQ",
+        "filterType": "vmsByName",
+        "caseSensitive": false,
+        "entityType": null,
+        "singleLine": false
+      }
+    ]
+  },
+  {
+    "displayName": "Development VMs new",
+    "className": "Group",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "logicalOperator": "AND",
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "expVal": ".*dev.*",
+        "expType": "RXEQ",
+        "filterType": "vmsByName",
+        "caseSensitive": false,
+        "entityType": null,
+        "singleLine": false
+      }
+    ]
+  },
+  {
+    "displayName": "Dev VMs by tag",
+    "className": "Group",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "logicalOperator": "AND",
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "expVal": "afl-environment=dev",
+        "expType": "EQ",
+        "filterType": "vmsByTag",
+        "caseSensitive": false,
+        "entityType": null,
+        "singleLine": false
+      }
+    ]
+  },
+  {
+    "displayName": "Azure VMs",
+    "className": "Group",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "logicalOperator": "AND",
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "expVal": "azure",
+        "expType": "EQ",
+        "filterType": "vmsByCloudProvider",
+        "caseSensitive": false,
+        "entityType": null,
+        "singleLine": false
+      }
+    ]
+  }
+]

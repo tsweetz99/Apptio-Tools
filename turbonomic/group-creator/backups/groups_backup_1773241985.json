@@ -1,0 +1,62 @@
+[
+  {
+    "displayName": "Production VMs new",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "filterType": "vmsByName",
+        "expType": "EQ",
+        "expVal": "prod.*",
+        "caseSensitive": false
+      }
+    ],
+    "description": "All VMs with names starting with prod"
+  },
+  {
+    "displayName": "Development VMs new",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "filterType": "vmsByName",
+        "expType": "EQ",
+        "expVal": ".*dev.*",
+        "caseSensitive": false
+      }
+    ],
+    "description": "All VMs with names containing dev"
+  },
+  {
+    "displayName": "Dev VMs by tag",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "filterType": "vmsByTag",
+        "expType": "EQ",
+        "expVal": "afl-environment=dev",
+        "caseSensitive": false
+      }
+    ],
+    "description": "VMs tagged as Dev"
+  },
+  {
+    "displayName": "Azure VMs",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "filterType": "vmsByCloudProvider",
+        "expType": "EQ",
+        "expVal": "azure",
+        "caseSensitive": false
+      }
+    ],
+    "description": "VMs running on Azure"
+  }
+]

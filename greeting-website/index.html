@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Greeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            min-width: 300px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        input {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #5568d3;
+        }
+        
+        #greeting {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+            color: #667eea;
+            font-weight: bold;
+            min-height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What's Your Name?</h1>
+        <input 
+            type="text" 
+            id="nameInput" 
+            placeholder="Enter your name" 
+            onkeypress="if(event.key === 'Enter') greetUser()"
+        >
+        <button onclick="greetUser()">Submit</button>
+        <div id="greeting"></div>
+    </div>
+
+    <script>
+        function greetUser() {
+            const nameInput = document.getElementById('nameInput');
+            const greeting = document.getElementById('greeting');
+            const name = nameInput.value.trim();
+            
+            if (name) {
+                greeting.textContent = `Hello ${name}!`;
+            } else {
+                greeting.textContent = 'Please enter your name';
+                greeting.style.color = '#e74c3c';
+                setTimeout(() => {
+                    greeting.style.color = '#667eea';
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>

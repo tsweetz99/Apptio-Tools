@@ -1,0 +1,38 @@
+[
+  {
+    "displayName": "TWS-test-consistent-resizing",
+    "className": "Group",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "logicalOperator": "AND",
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "expVal": "uncuat04data28|uncprd04app36|uncprd04app34|uncuat04app59|uncuat01wbd01",
+        "expType": "RXEQ",
+        "filterType": "vmsByName",
+        "caseSensitive": false,
+        "entityType": null,
+        "singleLine": false
+      }
+    ]
+  },
+  {
+    "displayName": "TWS-test2-consistent-resizing",
+    "className": "Group",
+    "groupType": "VirtualMachine",
+    "isStatic": false,
+    "logicalOperator": "AND",
+    "memberUuidList": [],
+    "criteriaList": [
+      {
+        "expVal": "uncuat04data.*",
+        "expType": "RXEQ",
+        "filterType": "vmsByName",
+        "caseSensitive": false,
+        "entityType": null,
+        "singleLine": false
+      }
+    ]
+  }
+]

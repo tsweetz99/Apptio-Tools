@@ -1,0 +1,422 @@
+================================================================================
+COMPREHENSIVE REPORT SUMMARY
+================================================================================
+Total Recommendations: 6435
+  - Downsizing: 5090
+  - Upsizing: 1164
+  - Other: 181
+
+Estimated Monthly Savings: $247,971.19
+Estimated Monthly Add Cost: $19,083.24
+Net Monthly Impact: $228,887.95
+
+Environment Breakdown:
+  - Dev: 952
+  - POC: 61
+  - POC01: 7
+  - POC02: 6
+  - POC03: 4
+  - POC04: 1
+  - POC06: 2
+  - POC07: 4
+  - POC08: 1
+  - POC09: 2
+  - POC10: 2
+  - POC11: 2
+  - POC14: 1
+  - POC17: 1
+  - POC41: 3
+  - Pre-Prod: 6
+  - Prod: 2009
+  - Shared: 48
+  - UAT: 186
+  - Unmapped: 3126
+  - jumpbox: 1
+  - poc: 1
+  - shared: 7
+  - us-prov-eastus-shared: 2
+================================================================================
+
+================================================================================
+DEV ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 952
+  - Downsizing: 624
+  - Upsizing: 328
+  - Other: 0
+
+Estimated Monthly Savings: $17,597.76
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $17,597.76
+
+Environment Breakdown:
+  - Dev: 952
+================================================================================
+
+================================================================================
+POC ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 61
+  - Downsizing: 36
+  - Upsizing: 25
+  - Other: 0
+
+Estimated Monthly Savings: $795.68
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $795.68
+
+Environment Breakdown:
+  - POC: 61
+================================================================================
+
+================================================================================
+POC01 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 7
+  - Downsizing: 1
+  - Upsizing: 5
+  - Other: 1
+
+Estimated Monthly Savings: $13.02
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $13.02
+
+Environment Breakdown:
+  - POC01: 7
+================================================================================
+
+================================================================================
+POC02 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 6
+  - Downsizing: 5
+  - Upsizing: 1
+  - Other: 0
+
+Estimated Monthly Savings: $89.38
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $89.38
+
+Environment Breakdown:
+  - POC02: 6
+================================================================================
+
+================================================================================
+POC03 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 4
+  - Downsizing: 2
+  - Upsizing: 2
+  - Other: 0
+
+Estimated Monthly Savings: $44.02
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $44.02
+
+Environment Breakdown:
+  - POC03: 4
+================================================================================
+
+================================================================================
+POC04 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 1
+  - Downsizing: 1
+  - Upsizing: 0
+  - Other: 0
+
+Estimated Monthly Savings: $28.39
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $28.39
+
+Environment Breakdown:
+  - POC04: 1
+================================================================================
+
+================================================================================
+POC06 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 2
+  - Downsizing: 0
+  - Upsizing: 2
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - POC06: 2
+================================================================================
+
+================================================================================
+POC07 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 4
+  - Downsizing: 1
+  - Upsizing: 2
+  - Other: 1
+
+Estimated Monthly Savings: $64.02
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $64.02
+
+Environment Breakdown:
+  - POC07: 4
+================================================================================
+
+================================================================================
+POC08 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 1
+  - Downsizing: 0
+  - Upsizing: 1
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - POC08: 1
+================================================================================
+
+================================================================================
+POC09 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 2
+  - Downsizing: 1
+  - Upsizing: 1
+  - Other: 0
+
+Estimated Monthly Savings: $106.96
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $106.96
+
+Environment Breakdown:
+  - POC09: 2
+================================================================================
+
+================================================================================
+POC10 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 2
+  - Downsizing: 0
+  - Upsizing: 2
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - POC10: 2
+================================================================================
+
+================================================================================
+POC11 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 2
+  - Downsizing: 0
+  - Upsizing: 2
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - POC11: 2
+================================================================================
+
+================================================================================
+POC14 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 1
+  - Downsizing: 1
+  - Upsizing: 0
+  - Other: 0
+
+Estimated Monthly Savings: $13.02
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $13.02
+
+Environment Breakdown:
+  - POC14: 1
+================================================================================
+
+================================================================================
+POC17 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 1
+  - Downsizing: 0
+  - Upsizing: 1
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - POC17: 1
+================================================================================
+
+================================================================================
+POC41 ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 3
+  - Downsizing: 0
+  - Upsizing: 3
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - POC41: 3
+================================================================================
+
+================================================================================
+PRE-PROD ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 6
+  - Downsizing: 6
+  - Upsizing: 0
+  - Other: 0
+
+Estimated Monthly Savings: $336.25
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $336.25
+
+Environment Breakdown:
+  - Pre-Prod: 6
+================================================================================
+
+================================================================================
+PROD ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 2009
+  - Downsizing: 1739
+  - Upsizing: 270
+  - Other: 0
+
+Estimated Monthly Savings: $174,981.68
+Estimated Monthly Add Cost: $19,083.24
+Net Monthly Impact: $155,898.44
+
+Environment Breakdown:
+  - Prod: 2009
+================================================================================
+
+================================================================================
+SHARED ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 48
+  - Downsizing: 38
+  - Upsizing: 10
+  - Other: 0
+
+Estimated Monthly Savings: $2,963.95
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $2,963.95
+
+Environment Breakdown:
+  - Shared: 48
+================================================================================
+
+================================================================================
+UAT ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 186
+  - Downsizing: 140
+  - Upsizing: 46
+  - Other: 0
+
+Estimated Monthly Savings: $11,365.17
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $11,365.17
+
+Environment Breakdown:
+  - UAT: 186
+================================================================================
+
+================================================================================
+UNMAPPED ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 3126
+  - Downsizing: 2486
+  - Upsizing: 462
+  - Other: 178
+
+Estimated Monthly Savings: $39,445.21
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $39,445.21
+
+Environment Breakdown:
+  - Unmapped: 3126
+================================================================================
+
+================================================================================
+JUMPBOX ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 1
+  - Downsizing: 1
+  - Upsizing: 0
+  - Other: 0
+
+Estimated Monthly Savings: $21.82
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $21.82
+
+Environment Breakdown:
+  - jumpbox: 1
+================================================================================
+
+================================================================================
+POC ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 1
+  - Downsizing: 0
+  - Upsizing: 1
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+  - poc: 1
+================================================================================
+
+================================================================================
+SHARED ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 7
+  - Downsizing: 6
+  - Upsizing: 0
+  - Other: 1
+
+Estimated Monthly Savings: $95.21
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $95.21
+
+Environment Breakdown:
+  - shared: 7
+================================================================================
+
+================================================================================
+US-PROV-EASTUS-SHARED ENVIRONMENT SUMMARY
+================================================================================
+Total Recommendations: 2
+  - Downsizing: 2
+  - Upsizing: 0
+  - Other: 0
+
+Estimated Monthly Savings: $9.66
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $9.66
+
+Environment Breakdown:
+  - us-prov-eastus-shared: 2
+================================================================================

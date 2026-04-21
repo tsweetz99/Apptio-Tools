@@ -1,0 +1,7 @@
+# Requirements for Cloudability scripts
+
+# For get_redshift_nodes.py
+boto3>=1.26.0
+
+# For other Cloudability API scripts
+requests>=2.28.0

@@ -1,0 +1,1233 @@
+[
+  {
+    "uuid": "639226110544291",
+    "displayName": "MANUAL",
+    "actionImpactID": 639226110544291,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "DELETE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Delete Empty EP1 App Service Plan UNC-UAT-BYOD-01-ASP from Duck Creek On Demand UAT/Pre-Production",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76256806786010",
+      "displayName": "UNC-UAT-BYOD-01-ASP",
+      "className": "VirtualMachineSpec",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974750000",
+        "displayName": "Duck Creek On Demand UAT/Pre-Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand UAT/Pre-Production": "/subscriptions/7e914569-8d38-414d-81c1-2b49a4645582/resourcegroups/unc-uat-byod-01-rg/providers/microsoft.web/serverfarms/unc-uat-byod-01-asp"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732117",
+            "displayName": "Duck Creek On Demand UAT/Pre-Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382359544679",
+            "displayName": "UNC-UAT-BYOD-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/7e914569-8d38-414d-81c1-2b49a4645582/resourcegroups/unc-uat-byod-01-rg/providers/microsoft.web/serverfarms/unc-uat-byod-01-asp",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "Purpose": [
+          "BYOD"
+        ],
+        "CustomerID": [
+          "Shared"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::VMSPECPROFILE::EP1"
+      },
+      "state": "ACTIVE"
+    },
+    "template": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase savings",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.1620375
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806815385",
+      "displayName": "azure-North Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::northcentralus::DC::northcentralus"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806815385",
+      "displayName": "azure-North Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::northcentralus::DC::northcentralus"
+      }
+    },
+    "executionCharacteristics": {
+      "disruptiveness": "NON_DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639226110544291
+  },
+  {
+    "uuid": "639226110544292",
+    "displayName": "MANUAL",
+    "actionImpactID": 639226110544292,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "DELETE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Delete Empty EP1 App Service Plan uscprdase03-oneclick-01-ASPP from Duck Creek On Demand Production",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76256806802109",
+      "displayName": "uscprdase03-oneclick-01-ASPP",
+      "className": "VirtualMachineSpec",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/unc-prd-ase-02-vnet-01-rg/providers/microsoft.web/serverfarms/uscprdase03-oneclick-01-aspp"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350212682",
+            "displayName": "UNC-PRD-ASE-02-VNET-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/unc-prd-ase-02-vnet-01-rg/providers/microsoft.web/serverfarms/uscprdase03-oneclick-01-aspp",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "CustomerID": [
+          "Shared"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::VMSPECPROFILE::EP1"
+      },
+      "state": "ACTIVE"
+    },
+    "template": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase savings",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.154725
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806809268",
+      "displayName": "azure-South Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328392199584",
+        "displayName": "b1eafb20-413d-4b5f-897f-1ffe01827281-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::southcentralus::DC::southcentralus"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806809268",
+      "displayName": "azure-South Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328392199584",
+        "displayName": "b1eafb20-413d-4b5f-897f-1ffe01827281-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::southcentralus::DC::southcentralus"
+      }
+    },
+    "executionCharacteristics": {
+      "disruptiveness": "NON_DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639226110544292
+  },
+  {
+    "uuid": "639226110544293",
+    "displayName": "MANUAL",
+    "actionImpactID": 639226110544293,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "DELETE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Delete Empty EP1 App Service Plan uscprdase03-oneclick-01-ASPP from Duck Creek On Demand Production",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76256806793825",
+      "displayName": "uscprdase03-oneclick-01-ASPP",
+      "className": "VirtualMachineSpec",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/usc-prd-ase-02-vnet-01-rg/providers/microsoft.web/serverfarms/uscprdase03-oneclick-01-aspp"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350212721",
+            "displayName": "USC-PRD-ASE-02-VNET-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/usc-prd-ase-02-vnet-01-rg/providers/microsoft.web/serverfarms/uscprdase03-oneclick-01-aspp",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "CustomerID": [
+          "Shared"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::VMSPECPROFILE::EP1"
+      },
+      "state": "ACTIVE"
+    },
+    "template": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase savings",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.154725
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806809268",
+      "displayName": "azure-South Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328392199584",
+        "displayName": "b1eafb20-413d-4b5f-897f-1ffe01827281-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::southcentralus::DC::southcentralus"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806809268",
+      "displayName": "azure-South Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328392199584",
+        "displayName": "b1eafb20-413d-4b5f-897f-1ffe01827281-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::southcentralus::DC::southcentralus"
+      }
+    },
+    "executionCharacteristics": {
+      "disruptiveness": "NON_DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639226110544293
+  },
+  {
+    "uuid": "639207108153228",
+    "displayName": "MANUAL",
+    "actionImpactID": 639207108153228,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "DELETE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Delete Empty S1 App Service Plan DCT-Duckcall-AppService from engHub1 Dev/Test",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76256806781367",
+      "displayName": "DCT-Duckcall-AppService",
+      "className": "VirtualMachineSpec",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974754144",
+        "displayName": "engHub1 Dev/Test",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "engHub1 Dev/Test": "/subscriptions/9ccb041c-b039-477e-96f8-d4444602ec88/resourcegroups/az-duckcall-function-rg1/providers/microsoft.web/serverfarms/dct-duckcall-appservice"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732108",
+            "displayName": "engHub1 Dev/Test",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287363213285536",
+            "displayName": "AZ-Duckcall-Function-RG1",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/9ccb041c-b039-477e-96f8-d4444602ec88/resourcegroups/az-duckcall-function-rg1/providers/microsoft.web/serverfarms/dct-duckcall-appservice",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "CustomerID": [
+          "90114000"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806800170",
+      "displayName": "S1",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::VMSPECPROFILE::S1"
+      },
+      "state": "ACTIVE"
+    },
+    "template": {
+      "uuid": "76256806800170",
+      "displayName": "S1",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase savings",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.045
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806817924",
+      "displayName": "azure-East US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328392199584",
+        "displayName": "b1eafb20-413d-4b5f-897f-1ffe01827281-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::eastus::DC::eastus"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806817924",
+      "displayName": "azure-East US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328392199584",
+        "displayName": "b1eafb20-413d-4b5f-897f-1ffe01827281-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::eastus::DC::eastus"
+      }
+    },
+    "executionCharacteristics": {
+      "disruptiveness": "NON_DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639207108153228
+  },
+  {
+    "uuid": "639226110544294",
+    "displayName": "MANUAL",
+    "actionImpactID": 639226110544294,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "DELETE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Delete Empty EP1 App Service Plan ASP-UNCPRDBYOD01RG-bdf2 from Duck Creek On Demand Production",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76256806771445",
+      "displayName": "ASP-UNCPRDBYOD01RG-bdf2",
+      "className": "VirtualMachineSpec",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/unc-prd-byod-01-rg/providers/microsoft.web/serverfarms/asp-uncprdbyod01rg-bdf2"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350212266",
+            "displayName": "UNC-PRD-BYOD-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/unc-prd-byod-01-rg/providers/microsoft.web/serverfarms/asp-uncprdbyod01rg-bdf2",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "Purpose": [
+          "BYOD"
+        ],
+        "CustomerID": [
+          "Shared"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::VMSPECPROFILE::EP1"
+      },
+      "state": "ACTIVE"
+    },
+    "template": {
+      "uuid": "76257152886039",
+      "displayName": "EP1",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase savings",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.1620375
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806815385",
+      "displayName": "azure-North Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::northcentralus::DC::northcentralus"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806815385",
+      "displayName": "azure-North Central US",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "ecf93295-daa0-4ad7-90ba-59094d4ae6d1-": "azure::northcentralus::DC::northcentralus"
+      }
+    },
+    "executionCharacteristics": {
+      "disruptiveness": "NON_DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639226110544294
+  },
+  {
+    "uuid": "639278271655978",
+    "displayName": "RECOMMEND",
+    "actionImpactID": 639278271655978,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "RECONFIGURE",
+    "actionState": "READY",
+    "actionMode": "RECOMMEND",
+    "actionStateDescription": "BLOCKED_BY_POLICIES",
+    "details": "Reconfigure Database app-worldline-saferpay to remove provisioned RU in payments-dev-eu1",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76328314806090",
+      "displayName": "app-worldline-saferpay",
+      "className": "Database",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974750944",
+        "displayName": "payments-dev-eu1",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "payments-dev-eu1": "azure::DB::3EA958F6-BFDC-3187-992A-6229A07113A4"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732856",
+            "displayName": "payments-dev-eu1",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287434549583544",
+            "displayName": "imburse-app-worldline-saferpay-dev-qa-euw-rg",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/ff851051-1a4d-4da5-a9f6-f7b0028cdb45/resourceGroups/imburse-app-worldline-saferpay-dev-qa-euw-rg/providers/Microsoft.DocumentDB/databaseAccounts/imburse-app-worldline-saferpay-qa/sqlDatabases/app-worldline-saferpay",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "product": [
+          "payments"
+        ],
+        "environment": [
+          "qa"
+        ],
+        "service": [
+          "app-worldline-saferpay"
+        ],
+        "locationCode": [
+          "euw"
+        ],
+        "platform": [
+          "dev"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806819341",
+      "displayName": "cosmos_autoscale",
+      "className": "DatabaseTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256993959888",
+        "displayName": "us-sandbox-eastus-dct-internal",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "us-prov-central-us-internal-expriment": "azure::DBPROFILE::cosmos_as"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806819341",
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "The database has provisioned throughput not shared by document collections",
+      "severity": "MINOR",
+      "importance": 0.0,
+      "reasonCommodities": [
+        "RU"
+      ]
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.009
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639278271655978
+  },
+  {
+    "uuid": "639278271655981",
+    "displayName": "RECOMMEND",
+    "actionImpactID": 639278271655981,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "RECONFIGURE",
+    "actionState": "READY",
+    "actionMode": "RECOMMEND",
+    "actionStateDescription": "BLOCKED_BY_POLICIES",
+    "details": "Reconfigure Database app-worldline-saferpay to remove provisioned RU in payments-dev-eu1",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76328314806080",
+      "displayName": "app-worldline-saferpay",
+      "className": "Database",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974750944",
+        "displayName": "payments-dev-eu1",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "payments-dev-eu1": "azure::DB::4BECBC8F-8169-3760-8937-2BA8AF1ACA4D"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732856",
+            "displayName": "payments-dev-eu1",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287434549583433",
+            "displayName": "imburse-app-worldline-saferpay-load-load-euw-rg",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/ff851051-1a4d-4da5-a9f6-f7b0028cdb45/resourceGroups/imburse-app-worldline-saferpay-load-load-euw-rg/providers/Microsoft.DocumentDB/databaseAccounts/imburse-app-worldline-saferpay-load/sqlDatabases/app-worldline-saferpay",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "product": [
+          "payments"
+        ],
+        "environment": [
+          "load"
+        ],
+        "service": [
+          "app-worldline-saferpay"
+        ],
+        "locationCode": [
+          "euw"
+        ],
+        "platform": [
+          "load"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806819341",
+      "displayName": "cosmos_autoscale",
+      "className": "DatabaseTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256993959888",
+        "displayName": "us-sandbox-eastus-dct-internal",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "us-prov-central-us-internal-expriment": "azure::DBPROFILE::cosmos_as"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806819341",
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "The database has provisioned throughput not shared by document collections",
+      "severity": "MINOR",
+      "importance": 0.0,
+      "reasonCommodities": [
+        "RU"
+      ]
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.009
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639278271655981
+  },
+  {
+    "uuid": "639226081377982",
+    "displayName": "RECOMMEND",
+    "actionImpactID": 639226081377982,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "RECONFIGURE",
+    "actionState": "READY",
+    "actionMode": "RECOMMEND",
+    "actionStateDescription": "BLOCKED_BY_POLICIES",
+    "details": "Reconfigure Database metadata to remove provisioned RU in Duck Creek On Demand Production",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76276116910273",
+      "displayName": "metadata",
+      "className": "Database",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "azure::DB::CA12172C-E3E4-37DF-A93C-B15047710F64"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350213058",
+            "displayName": "AUE-PRD-01-ASE-COSMOS-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourceGroups/AUE-PRD-01-ASE-COSMOS-RG/providers/Microsoft.DocumentDB/databaseAccounts/aueprd01asecosmos01/sqlDatabases/metadata",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "defaultExperience": [
+          "Core (SQL)"
+        ],
+        "Environment": [
+          "Production"
+        ],
+        "Purpose": [
+          "V12 Cumulus"
+        ],
+        "monitor": [
+          "true"
+        ],
+        "CustomerID": [
+          "Shared"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806819341",
+      "displayName": "cosmos_autoscale",
+      "className": "DatabaseTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256993959888",
+        "displayName": "us-sandbox-eastus-dct-internal",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "us-prov-central-us-internal-expriment": "azure::DBPROFILE::cosmos_as"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806819341",
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "The database has provisioned throughput not shared by document collections",
+      "severity": "MINOR",
+      "importance": 0.0,
+      "reasonCommodities": [
+        "RU"
+      ]
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.0414
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639226081377982
+  },
+  {
+    "uuid": "639278271655987",
+    "displayName": "RECOMMEND",
+    "actionImpactID": 639278271655987,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "RECONFIGURE",
+    "actionState": "READY",
+    "actionMode": "RECOMMEND",
+    "actionStateDescription": "BLOCKED_BY_POLICIES",
+    "details": "Reconfigure Database app-nab-direct-link to remove provisioned RU in payments-dev-eu1",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76328314806121",
+      "displayName": "app-nab-direct-link",
+      "className": "Database",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974750944",
+        "displayName": "payments-dev-eu1",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "payments-dev-eu1": "azure::DB::05D64C39-A85D-3208-B43A-7B1A92675A0F"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732856",
+            "displayName": "payments-dev-eu1",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287434549583427",
+            "displayName": "imburse-app-nab-direct-link-dev-qa-euw-rg",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/ff851051-1a4d-4da5-a9f6-f7b0028cdb45/resourceGroups/imburse-app-nab-direct-link-dev-qa-euw-rg/providers/Microsoft.DocumentDB/databaseAccounts/imburse-app-nab-direct-link-qa/sqlDatabases/app-nab-direct-link",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "product": [
+          "payments"
+        ],
+        "environment": [
+          "qa"
+        ],
+        "service": [
+          "app-nab-direct-link"
+        ],
+        "locationCode": [
+          "euw"
+        ],
+        "platform": [
+          "dev"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806819341",
+      "displayName": "cosmos_autoscale",
+      "className": "DatabaseTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256993959888",
+        "displayName": "us-sandbox-eastus-dct-internal",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "us-prov-central-us-internal-expriment": "azure::DBPROFILE::cosmos_as"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806819341",
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "The database has provisioned throughput not shared by document collections",
+      "severity": "MINOR",
+      "importance": 0.0,
+      "reasonCommodities": [
+        "RU"
+      ]
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.009
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639278271655987
+  },
+  {
+    "uuid": "639278271655985",
+    "displayName": "RECOMMEND",
+    "actionImpactID": 639278271655985,
+    "marketID": 777777,
+    "createTime": "2026-02-26T22:12:08Z",
+    "actionType": "RECONFIGURE",
+    "actionState": "READY",
+    "actionMode": "RECOMMEND",
+    "actionStateDescription": "BLOCKED_BY_POLICIES",
+    "details": "Reconfigure Database app-worldline-saferpay to remove provisioned RU in payments-dev-eu1",
+    "importance": -1.0,
+    "target": {
+      "uuid": "76328314806102",
+      "displayName": "app-worldline-saferpay",
+      "className": "Database",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974750944",
+        "displayName": "payments-dev-eu1",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "payments-dev-eu1": "azure::DB::6792DC35-EBAE-3380-B746-372D047AC5CC"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732856",
+            "displayName": "payments-dev-eu1",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287434549583531",
+            "displayName": "imburse-app-worldline-saferpay-dev-ci-euw-rg",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/ff851051-1a4d-4da5-a9f6-f7b0028cdb45/resourceGroups/imburse-app-worldline-saferpay-dev-ci-euw-rg/providers/Microsoft.DocumentDB/databaseAccounts/imburse-app-worldline-saferpay-ci/sqlDatabases/app-worldline-saferpay",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "product": [
+          "payments"
+        ],
+        "environment": [
+          "ci"
+        ],
+        "service": [
+          "app-worldline-saferpay"
+        ],
+        "locationCode": [
+          "euw"
+        ],
+        "platform": [
+          "dev"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806819341",
+      "displayName": "cosmos_autoscale",
+      "className": "DatabaseTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256993959888",
+        "displayName": "us-sandbox-eastus-dct-internal",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "us-prov-central-us-internal-expriment": "azure::DBPROFILE::cosmos_as"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806819341",
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "The database has provisioned throughput not shared by document collections",
+      "severity": "MINOR",
+      "importance": 0.0,
+      "reasonCommodities": [
+        "RU"
+      ]
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.009
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "IRREVERSIBLE"
+    },
+    "source": "MARKET",
+    "actionID": 639278271655985
+  }
+]

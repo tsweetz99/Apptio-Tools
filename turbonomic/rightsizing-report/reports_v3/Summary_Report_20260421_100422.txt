@@ -1,0 +1,14 @@
+================================================================================
+COMPREHENSIVE REPORT SUMMARY
+================================================================================
+Total Recommendations: 0
+  - Downsizing: 0
+  - Upsizing: 0
+  - Other: 0
+
+Estimated Monthly Savings: $0.00
+Estimated Monthly Add Cost: $0.00
+Net Monthly Impact: $0.00
+
+Environment Breakdown:
+================================================================================

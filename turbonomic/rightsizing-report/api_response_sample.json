@@ -1,0 +1,850 @@
+[
+  {
+    "uuid": "639280120295563",
+    "displayName": "MANUAL",
+    "actionImpactID": 639280120295563,
+    "marketID": 777777,
+    "createTime": "2026-04-11T00:21:55Z",
+    "actionType": "SCALE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Scale Virtual Machine AUEPRDHUB01BIGIP02 from Standard_DS5_v2 to Standard_E8ds_v5 in Duck Creek On Demand Production",
+    "importance": 0.00018924773,
+    "target": {
+      "uuid": "76276116911467",
+      "displayName": "AUEPRDHUB01BIGIP02",
+      "className": "VirtualMachine",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "236c2b52-c8fa-4ee3-8e5a-9b82bf4cf5a5"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350212856",
+            "displayName": "AUE-PRD-HUB-01-BIGIP-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/aue-prd-hub-01-bigip-01-rg/providers/microsoft.compute/virtualmachines/aueprdhub01bigip02",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "Owner": [
+          "OnDemand.Infrastructure@duckcreek.com"
+        ],
+        "environment": [
+          "Production"
+        ],
+        "Compliance": [
+          ""
+        ],
+        "Security Classification": [
+          "HIGHLY CONFIDENTIAL"
+        ],
+        "Schedule": [
+          "24x7"
+        ],
+        "Patching": [
+          "Shared-Linux"
+        ],
+        "Purpose": [
+          "BIG-IP"
+        ],
+        "CustomerID": [
+          "Shared"
+        ],
+        "Scheduled_Downtime": [
+          "N/A"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806776653",
+      "displayName": "Standard_DS5_v2",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_DS5_v2"
+      },
+      "state": "ACTIVE"
+    },
+    "newEntity": {
+      "uuid": "76256806819848",
+      "displayName": "Standard_E8ds_v5",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_E8ds_v5"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806776653",
+    "newValue": "76256806819848",
+    "template": {
+      "uuid": "76256806819848",
+      "displayName": "Standard_E8ds_v5",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase Discount Utilization",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.6094445
+      },
+      {
+        "name": "effectiveCost",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.6196843
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806819601",
+      "displayName": "azure-Australia East",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::australiaeast::DC::australiaeast"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806819601",
+      "displayName": "azure-Australia East",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::australiaeast::DC::australiaeast"
+      }
+    },
+    "compoundActions": [
+      {
+        "displayName": "MANUAL",
+        "actionType": "SCALE",
+        "actionState": "READY",
+        "actionMode": "MANUAL",
+        "details": "Scale Virtual Machine AUEPRDHUB01BIGIP02 from Standard_DS5_v2 to Standard_E8ds_v5",
+        "target": {
+          "uuid": "76276116911467",
+          "displayName": "AUEPRDHUB01BIGIP02",
+          "className": "VirtualMachine",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76256974752816",
+            "displayName": "Duck Creek On Demand Production",
+            "isProbeRegistered": false,
+            "type": "Azure Subscription",
+            "readonly": false
+          },
+          "vendorIds": {
+            "Duck Creek On Demand Production": "236c2b52-c8fa-4ee3-8e5a-9b82bf4cf5a5"
+          },
+          "state": "ACTIVE",
+          "tags": {
+            "Owner": [
+              "OnDemand.Infrastructure@duckcreek.com"
+            ],
+            "environment": [
+              "Production"
+            ],
+            "Compliance": [
+              ""
+            ],
+            "Security Classification": [
+              "HIGHLY CONFIDENTIAL"
+            ],
+            "Schedule": [
+              "24x7"
+            ],
+            "Patching": [
+              "Shared-Linux"
+            ],
+            "Purpose": [
+              "BIG-IP"
+            ],
+            "CustomerID": [
+              "Shared"
+            ],
+            "Scheduled_Downtime": [
+              "N/A"
+            ]
+          }
+        },
+        "currentEntity": {
+          "uuid": "76256806776653",
+          "displayName": "Standard_DS5_v2",
+          "className": "ComputeTier",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76328388126544",
+            "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+            "isProbeRegistered": false,
+            "type": "Azure Infrastructure",
+            "readonly": false
+          },
+          "vendorIds": {
+            "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_DS5_v2"
+          },
+          "state": "ACTIVE"
+        },
+        "newEntity": {
+          "uuid": "76256806819848",
+          "displayName": "Standard_E8ds_v5",
+          "className": "ComputeTier",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76328347519456",
+            "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+            "isProbeRegistered": false,
+            "type": "Azure Infrastructure",
+            "readonly": false
+          },
+          "vendorIds": {
+            "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_E8ds_v5"
+          },
+          "state": "ACTIVE"
+        },
+        "currentValue": "76256806776653",
+        "newValue": "76256806819848"
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "REVERSIBLE"
+    },
+    "source": "CLOUD_OPTIMIZER",
+    "actionID": 639280120295563
+  },
+  {
+    "uuid": "639280120295568",
+    "displayName": "MANUAL",
+    "actionImpactID": 639280120295568,
+    "marketID": 777777,
+    "createTime": "2026-04-11T00:21:55Z",
+    "actionType": "SCALE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Scale Virtual Machine AUEPRDHUB01BIGIP01 from Standard_DS5_v2 to Standard_E8ds_v5 in Duck Creek On Demand Production",
+    "importance": 0.015723562,
+    "target": {
+      "uuid": "76276116911215",
+      "displayName": "AUEPRDHUB01BIGIP01",
+      "className": "VirtualMachine",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "4ab4cc87-6cb9-4fe4-a84a-fc239e34d9a8"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350212856",
+            "displayName": "AUE-PRD-HUB-01-BIGIP-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/aue-prd-hub-01-bigip-01-rg/providers/microsoft.compute/virtualmachines/aueprdhub01bigip01",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "Owner": [
+          "OnDemand.Infrastructure@duckcreek.com"
+        ],
+        "environment": [
+          "Production"
+        ],
+        "Compliance": [
+          ""
+        ],
+        "Security Classification": [
+          "HIGHLY CONFIDENTIAL"
+        ],
+        "Schedule": [
+          "24x7"
+        ],
+        "Patching": [
+          "Shared-Linux"
+        ],
+        "Purpose": [
+          "BIG-IP"
+        ],
+        "CustomerID": [
+          "Shared"
+        ],
+        "Scheduled_Downtime": [
+          "N/A"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806776653",
+      "displayName": "Standard_DS5_v2",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_DS5_v2"
+      },
+      "state": "ACTIVE"
+    },
+    "newEntity": {
+      "uuid": "76256806819848",
+      "displayName": "Standard_E8ds_v5",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_E8ds_v5"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806776653",
+    "newValue": "76256806819848",
+    "template": {
+      "uuid": "76256806819848",
+      "displayName": "Standard_E8ds_v5",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Increase Discount Utilization",
+      "severity": "MINOR",
+      "importance": 0.0
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.6013865
+      },
+      {
+        "name": "effectiveCost",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.6124153
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806819601",
+      "displayName": "azure-Australia East",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::australiaeast::DC::australiaeast"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806819601",
+      "displayName": "azure-Australia East",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::australiaeast::DC::australiaeast"
+      }
+    },
+    "compoundActions": [
+      {
+        "displayName": "MANUAL",
+        "actionType": "SCALE",
+        "actionState": "READY",
+        "actionMode": "MANUAL",
+        "details": "Scale Virtual Machine AUEPRDHUB01BIGIP01 from Standard_DS5_v2 to Standard_E8ds_v5",
+        "target": {
+          "uuid": "76276116911215",
+          "displayName": "AUEPRDHUB01BIGIP01",
+          "className": "VirtualMachine",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76256974752816",
+            "displayName": "Duck Creek On Demand Production",
+            "isProbeRegistered": false,
+            "type": "Azure Subscription",
+            "readonly": false
+          },
+          "vendorIds": {
+            "Duck Creek On Demand Production": "4ab4cc87-6cb9-4fe4-a84a-fc239e34d9a8"
+          },
+          "state": "ACTIVE",
+          "tags": {
+            "Owner": [
+              "OnDemand.Infrastructure@duckcreek.com"
+            ],
+            "environment": [
+              "Production"
+            ],
+            "Compliance": [
+              ""
+            ],
+            "Security Classification": [
+              "HIGHLY CONFIDENTIAL"
+            ],
+            "Schedule": [
+              "24x7"
+            ],
+            "Patching": [
+              "Shared-Linux"
+            ],
+            "Purpose": [
+              "BIG-IP"
+            ],
+            "CustomerID": [
+              "Shared"
+            ],
+            "Scheduled_Downtime": [
+              "N/A"
+            ]
+          }
+        },
+        "currentEntity": {
+          "uuid": "76256806776653",
+          "displayName": "Standard_DS5_v2",
+          "className": "ComputeTier",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76328388126544",
+            "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+            "isProbeRegistered": false,
+            "type": "Azure Infrastructure",
+            "readonly": false
+          },
+          "vendorIds": {
+            "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_DS5_v2"
+          },
+          "state": "ACTIVE"
+        },
+        "newEntity": {
+          "uuid": "76256806819848",
+          "displayName": "Standard_E8ds_v5",
+          "className": "ComputeTier",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76328347519456",
+            "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+            "isProbeRegistered": false,
+            "type": "Azure Infrastructure",
+            "readonly": false
+          },
+          "vendorIds": {
+            "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_E8ds_v5"
+          },
+          "state": "ACTIVE"
+        },
+        "currentValue": "76256806776653",
+        "newValue": "76256806819848"
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "REVERSIBLE"
+    },
+    "source": "CLOUD_OPTIMIZER",
+    "actionID": 639280120295568
+  },
+  {
+    "uuid": "639226668284009",
+    "displayName": "MANUAL",
+    "actionImpactID": 639226668284009,
+    "marketID": 777777,
+    "createTime": "2026-04-10T09:41:55Z",
+    "actionType": "SCALE",
+    "actionState": "READY",
+    "actionMode": "MANUAL",
+    "actionStateDescription": "READY_ACCEPT_AND_EXECUTE",
+    "details": "Scale Virtual Machine INCPRDHUB01BIGIP02 from Standard_DS5_v2 to Standard_E8ads_v5 in Duck Creek On Demand Production",
+    "importance": 0.0012399246,
+    "target": {
+      "uuid": "76276116911102",
+      "displayName": "INCPRDHUB01BIGIP02",
+      "className": "VirtualMachine",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76256974752816",
+        "displayName": "Duck Creek On Demand Production",
+        "isProbeRegistered": false,
+        "type": "Azure Subscription",
+        "readonly": false
+      },
+      "vendorIds": {
+        "Duck Creek On Demand Production": "31d18e86-54b5-44da-8af0-3fea00eb17a7"
+      },
+      "state": "ACTIVE",
+      "aspects": {
+        "cloudAspect": {
+          "businessAccount": {
+            "uuid": "76256806732118",
+            "displayName": "Duck Creek On Demand Production",
+            "className": "BusinessAccount"
+          },
+          "resourceGroup": {
+            "uuid": "287382350212110",
+            "displayName": "INC-PRD-HUB-01-BIGIP-01-RG",
+            "className": "ResourceGroup"
+          },
+          "resourceId": "/subscriptions/35f4c8b1-858f-48c6-ac79-6afd28a64ad7/resourcegroups/inc-prd-hub-01-bigip-01-rg/providers/microsoft.compute/virtualmachines/incprdhub01bigip02",
+          "type": "CloudAspectApiDTO"
+        }
+      },
+      "tags": {
+        "Owner": [
+          "OnDemand.Infrastructure@duckcreek.com"
+        ],
+        "environment": [
+          "Production"
+        ],
+        "Compliance": [
+          ""
+        ],
+        "Security Classification": [
+          "HIGHLY CONFIDENTIAL"
+        ],
+        "Schedule": [
+          "24x7"
+        ],
+        "Patching": [
+          "Shared-Linux"
+        ],
+        "Purpose": [
+          "BIG-IP"
+        ],
+        "CustomerID": [
+          "Shared"
+        ],
+        "Scheduled_Downtime": [
+          "N/A"
+        ]
+      }
+    },
+    "currentEntity": {
+      "uuid": "76256806776653",
+      "displayName": "Standard_DS5_v2",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_DS5_v2"
+      },
+      "state": "ACTIVE"
+    },
+    "newEntity": {
+      "uuid": "76256939551543",
+      "displayName": "Standard_E8ads_v5",
+      "className": "ComputeTier",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328347519456",
+        "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_E8ads_v5"
+      },
+      "state": "ACTIVE"
+    },
+    "currentValue": "76256806776653",
+    "newValue": "76256939551543",
+    "template": {
+      "uuid": "76256939551543",
+      "displayName": "Standard_E8ads_v5",
+      "className": "ComputeTier",
+      "discovered": false,
+      "enableMatch": false
+    },
+    "risk": {
+      "subCategory": "Efficiency Improvement",
+      "description": "Underutilized IO Throughput, IOPS, vCPU",
+      "severity": "MINOR",
+      "importance": 0.0,
+      "reasonCommodities": [
+        "VCPU",
+        "IOThroughput",
+        "StorageAccess"
+      ]
+    },
+    "stats": [
+      {
+        "name": "costPrice",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.5371243
+      },
+      {
+        "name": "effectiveCost",
+        "filters": [
+          {
+            "type": "savingsType",
+            "value": "savings",
+            "displayName": null
+          }
+        ],
+        "units": "$/h",
+        "value": 0.6883794
+      }
+    ],
+    "currentLocation": {
+      "uuid": "76256806783357",
+      "displayName": "azure-Central India",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::centralindia::DC::centralindia"
+      }
+    },
+    "newLocation": {
+      "uuid": "76256806783357",
+      "displayName": "azure-Central India",
+      "className": "Region",
+      "environmentType": "CLOUD",
+      "discoveredBy": {
+        "uuid": "76328388126544",
+        "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+        "category": "Public Cloud",
+        "isProbeRegistered": false,
+        "type": "Azure Infrastructure",
+        "readonly": false
+      },
+      "vendorIds": {
+        "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::centralindia::DC::centralindia"
+      }
+    },
+    "compoundActions": [
+      {
+        "displayName": "MANUAL",
+        "actionType": "SCALE",
+        "actionState": "READY",
+        "actionMode": "MANUAL",
+        "details": "Scale Virtual Machine INCPRDHUB01BIGIP02 from Standard_DS5_v2 to Standard_E8ads_v5",
+        "target": {
+          "uuid": "76276116911102",
+          "displayName": "INCPRDHUB01BIGIP02",
+          "className": "VirtualMachine",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76256974752816",
+            "displayName": "Duck Creek On Demand Production",
+            "isProbeRegistered": false,
+            "type": "Azure Subscription",
+            "readonly": false
+          },
+          "vendorIds": {
+            "Duck Creek On Demand Production": "31d18e86-54b5-44da-8af0-3fea00eb17a7"
+          },
+          "state": "ACTIVE",
+          "tags": {
+            "Owner": [
+              "OnDemand.Infrastructure@duckcreek.com"
+            ],
+            "environment": [
+              "Production"
+            ],
+            "Compliance": [
+              ""
+            ],
+            "Security Classification": [
+              "HIGHLY CONFIDENTIAL"
+            ],
+            "Schedule": [
+              "24x7"
+            ],
+            "Patching": [
+              "Shared-Linux"
+            ],
+            "Purpose": [
+              "BIG-IP"
+            ],
+            "CustomerID": [
+              "Shared"
+            ],
+            "Scheduled_Downtime": [
+              "N/A"
+            ]
+          }
+        },
+        "currentEntity": {
+          "uuid": "76256806776653",
+          "displayName": "Standard_DS5_v2",
+          "className": "ComputeTier",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76328388126544",
+            "displayName": "7d6f8c22-d095-47ef-abdd-c87a241e0021-",
+            "isProbeRegistered": false,
+            "type": "Azure Infrastructure",
+            "readonly": false
+          },
+          "vendorIds": {
+            "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_DS5_v2"
+          },
+          "state": "ACTIVE"
+        },
+        "newEntity": {
+          "uuid": "76256939551543",
+          "displayName": "Standard_E8ads_v5",
+          "className": "ComputeTier",
+          "environmentType": "CLOUD",
+          "discoveredBy": {
+            "uuid": "76328347519456",
+            "displayName": "8adcbe18-f4e5-46b2-ac29-e1ba0ea474a1-",
+            "isProbeRegistered": false,
+            "type": "Azure Infrastructure",
+            "readonly": false
+          },
+          "vendorIds": {
+            "83030971-88c6-461e-8552-c8ee9d60e0b7-": "azure::VMPROFILE::Standard_E8ads_v5"
+          },
+          "state": "ACTIVE"
+        },
+        "currentValue": "76256806776653",
+        "newValue": "76256939551543"
+      }
+    ],
+    "executionCharacteristics": {
+      "disruptiveness": "DISRUPTIVE",
+      "reversibility": "REVERSIBLE"
+    },
+    "source": "CLOUD_OPTIMIZER",
+    "actionID": 639226668284009
+  }
+]

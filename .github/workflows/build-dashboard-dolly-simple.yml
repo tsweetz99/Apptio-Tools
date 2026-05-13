@@ -23,8 +23,8 @@ jobs:
           pip install pyinstaller requests urllib3
       
       - name: Build
+        working-directory: cloudability/dashboard-dolly
         run: |
-          cd cloudability/dashboard-dolly
           pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments;Environments" dashboard_dolly_gui.py
       
       - name: Upload
@@ -52,8 +52,8 @@ jobs:
           pip3 install pyinstaller requests urllib3
       
       - name: Build
+        working-directory: cloudability/dashboard-dolly
         run: |
-          cd cloudability/dashboard-dolly
           pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments:Environments" --osx-bundle-identifier=com.ibm.dashboarddolly dashboard_dolly_gui.py
       
       - name: Upload

@@ -255,10 +255,24 @@ Environment Breakdown:
 
 ### Issue: No storage actions found
 
-**Solution:**
-- Verify Turbonomic has discovered Azure storage resources
-- Check that storage optimization is enabled in Turbonomic
-- Try with `--all-clouds` to see if other providers have data
+If you're getting no results, see the comprehensive troubleshooting guide:
+
+**[DISK_OPTIMIZATION_TROUBLESHOOTING.md](DISK_OPTIMIZATION_TROUBLESHOOTING.md)**
+
+This guide includes:
+- Step-by-step diagnostic process
+- Debug script to identify the issue
+- Common causes and solutions
+- Alternative query approaches
+- Turbonomic configuration checks
+
+**Quick Debug:**
+```bash
+# Run the storage discovery debug script
+python3 debug_storage_entities.py \
+    --url https://your-turbo-instance.com \
+    --jsessionid YOUR_SESSION_ID
+```
 
 ### Issue: All disks show "Review Required"
 

@@ -1,0 +1,7 @@
+# Requirements for Turbonomic Authentication Module
+
+# Core dependency for HTTP requests
+requests>=2.28.0
+
+# For SSL certificate handling
+urllib3>=1.26.0

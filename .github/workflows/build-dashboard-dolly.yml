@@ -1,0 +1,138 @@
+name: Build Dashboard Dolly Executables
+
+on:
+  push:
+    tags:
+      - 'dashboard-dolly-v*'
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  build-windows:
+    name: Build Windows Executable
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd cloudability/dashboard-dolly
+          pip install -r requirements.txt
+          pip install pyinstaller
+      
+      - name: Sanitize and build
+        run: |
+          cd cloudability/dashboard-dolly
+          python build_executable.py
+      
+      - name: Create distribution package
+        run: |
+          cd cloudability/dashboard-dolly/dist
+          Compress-Archive -Path DashboardDolly -DestinationPath DashboardDolly-Windows.zip
+      
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DashboardDolly-Windows
+          path: cloudability/dashboard-dolly/dist/DashboardDolly-Windows.zip
+          retention-days: 90
+
+  build-macos:
+    name: Build macOS Executable
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          cd cloudability/dashboard-dolly
+          pip install -r requirements.txt
+          pip install pyinstaller
+      
+      - name: Sanitize and build
+        run: |
+          cd cloudability/dashboard-dolly
+          python3 build_executable.py
+      
+      - name: Create distribution package
+        run: |
+          cd cloudability/dashboard-dolly/dist
+          zip -r DashboardDolly-macOS.zip DashboardDolly.app
+      
+      - name: Upload macOS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DashboardDolly-macOS
+          path: cloudability/dashboard-dolly/dist/DashboardDolly-macOS.zip
+          retention-days: 90
+
+  create-release:
+    name: Create Release
+    needs: [build-windows, build-macos]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Download Windows artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: DashboardDolly-Windows
+          path: ./artifacts
+      
+      - name: Download macOS artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: DashboardDolly-macOS
+          path: ./artifacts
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ./artifacts/DashboardDolly-Windows.zip
+            ./artifacts/DashboardDolly-macOS.zip
+            cloudability/dashboard-dolly/END_USER_GUIDE.md
+            cloudability/dashboard-dolly/SECURITY_PACKAGING_GUIDE.md
+          body: |
+            # Dashboard Dolly Release
+            
+            ## Downloads
+            - **Windows**: DashboardDolly-Windows.zip
+            - **macOS**: DashboardDolly-macOS.zip
+            
+            ## Installation
+            1. Download the appropriate file for your platform
+            2. Extract the zip file
+            3. See END_USER_GUIDE.md for usage instructions
+            
+            ## Security
+            - No API keys are included
+            - Users must provide their own credentials
+            - See SECURITY_PACKAGING_GUIDE.md for details
+            
+            ## What's New
+            - Full dashboard transfer with widget support
+            - Direct API key entry (no config files needed)
+            - Improved error handling and logging
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# Made with Bob

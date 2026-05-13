@@ -76,47 +76,56 @@ class TurbonomicDiskOptimizationReport:
         """Fetch storage-related actions with pagination support."""
         url = f"{self.turbo_url}/api/v3/markets/Market/actions"
         
-        # Don't filter by actionTypeId - get all actions and filter by target type
-        params = {
-            'actionStateList': ['READY', 'ACCEPTED', 'QUEUED', 'IN_PROGRESS'],
-            'limit': 500
+        # Query specifically for storage tier actions
+        # Note: Turbonomic uses "VirtualVolume" for Azure managed disks
+        payload = {
+            "actionStateList": ["READY", "ACCEPTED", "QUEUED", "IN_PROGRESS"],
+            "actionTypeList": ["RESIZE", "SCALE", "RECONFIGURE"],
+            "relatedEntityTypes": ["VirtualVolume", "Storage", "Volume", "VirtualMachineVolume"],
+            "environmentType": "CLOUD",
+            "detailLevel": "EXECUTION"
         }
         
         all_actions = []
-        cursor = None
+        cursor = 0
+        page_size = 500
         
         print(f"Fetching storage actions from {url}...")
+        print(f"Query parameters: {json.dumps(payload, indent=2)}")
         
-        while True:
-            if cursor:
-                params['cursor'] = cursor
-            
-            try:
-                response = self.session.post(url, json=params)
-                response.raise_for_status()
-                data = response.json()
+        try:
+            while True:
+                params = {
+                    "ascending": "false",
+                    "cursor": str(cursor),
+                    "disable_hateoas": "true",
+                    "forceExpansionOfAggregatedEntities": "true",
+                    "order_by": "savings",
+                    "limit": str(page_size)
+                }
                 
-                # Handle both list and dict responses
-                if isinstance(data, list):
-                    actions = data
-                    all_actions.extend(actions)
-                    print(f"  Retrieved {len(actions)} actions (total: {len(all_actions)})")
-                    break  # List response doesn't support pagination
-                else:
-                    actions = data.get('result', [])
-                    all_actions.extend(actions)
-                    print(f"  Retrieved {len(actions)} actions (total: {len(all_actions)})")
-                    
-                    if not fetch_all or len(actions) < 500:
-                        break
-                    
-                    cursor = data.get('cursor')
-                    if not cursor:
-                        break
-                    
-            except requests.exceptions.RequestException as e:
-                print(f"Error fetching actions: {e}")
-                sys.exit(1)
+                response = self.session.post(url, json=payload, params=params)
+                response.raise_for_status()
+                
+                data = response.json()
+                actions = data if isinstance(data, list) else []
+                
+                if not actions:
+                    break
+                
+                all_actions.extend(actions)
+                print(f"  Retrieved {len(actions)} actions (total: {len(all_actions)})")
+                
+                if len(actions) < page_size or not fetch_all:
+                    break
+                
+                cursor += page_size
+                
+        except requests.exceptions.RequestException as e:
+            print(f"Error fetching actions: {e}")
+            if hasattr(e, 'response') and e.response is not None:
+                print(f"Response: {e.response.text}")
+            sys.exit(1)
         
         print(f"Total storage actions retrieved: {len(all_actions)}")
         return all_actions
@@ -288,7 +297,17 @@ class TurbonomicDiskOptimizationReport:
         """Generate disk optimization report data."""
         actions = self.get_storage_actions()
         
+        if not actions:
+            print("\n⚠️  No storage actions found!")
+            print("This could mean:")
+            print("  1. Turbonomic hasn't discovered any storage optimization opportunities")
+            print("  2. Storage optimization policies are not enabled")
+            print("  3. The API query parameters need adjustment")
+            print("\nTrying alternative query method...")
+            actions = self._get_all_actions_fallback()
+        
         report_data = []
+        storage_actions_found = 0
         
         for action in actions:
             target = action.get('target', {})
@@ -298,13 +317,16 @@ class TurbonomicDiskOptimizationReport:
             if azure_only and cloud_provider != 'Azure':
                 continue
             
-            # Only process disk/volume-related actions
+            # Check target type
             target_type = target.get('className', '')
             action_type = action.get('actionType', '')
             
             # Look for Storage or Volume entities with RESIZE/SCALE actions
-            if target_type not in ['Storage', 'VirtualMachineVolume', 'Volume']:
+            # VirtualVolume is the Azure managed disk entity type
+            if target_type not in ['VirtualVolume', 'Storage', 'VirtualMachineVolume', 'Volume', 'VirtualDisk']:
                 continue
+            
+            storage_actions_found += 1
             
             # Skip if not a tier/resize action
             if action_type not in ['RESIZE', 'SCALE', 'RECONFIGURE']:
@@ -366,7 +388,71 @@ class TurbonomicDiskOptimizationReport:
             
             report_data.append(row)
         
+        print(f"\nProcessed {storage_actions_found} storage-related actions")
+        print(f"Generated {len(report_data)} disk optimization recommendations")
+        
         return report_data
+    
+    def _get_all_actions_fallback(self) -> List[Dict]:
+        """Fallback method: Get all actions and filter for storage."""
+        url = f"{self.turbo_url}/api/v3/markets/Market/actions"
+        
+        payload = {
+            "actionStateList": ["READY", "ACCEPTED", "QUEUED", "IN_PROGRESS"],
+            "environmentType": "CLOUD",
+            "detailLevel": "EXECUTION"
+        }
+        
+        all_actions = []
+        cursor = 0
+        page_size = 500
+        
+        print(f"Fetching all actions (fallback method)...")
+        
+        try:
+            while True:
+                params = {
+                    "ascending": "false",
+                    "cursor": str(cursor),
+                    "disable_hateoas": "true",
+                    "limit": str(page_size)
+                }
+                
+                response = self.session.post(url, json=payload, params=params)
+                response.raise_for_status()
+                
+                data = response.json()
+                actions = data if isinstance(data, list) else []
+                
+                if not actions:
+                    break
+                
+                # Filter for storage-related actions
+                storage_actions = [
+                    a for a in actions
+                    if a.get('target', {}).get('className', '') in
+                    ['VirtualVolume', 'Storage', 'VirtualMachineVolume', 'Volume', 'VirtualDisk']
+                ]
+                
+                all_actions.extend(storage_actions)
+                print(f"  Retrieved {len(actions)} actions, {len(storage_actions)} storage-related (total: {len(all_actions)})")
+                
+                if len(actions) < page_size:
+                    break
+                
+                cursor += page_size
+                
+                # Safety limit
+                if cursor > 5000:
+                    print("  Reached safety limit of 5000 actions")
+                    break
+                
+        except requests.exceptions.RequestException as e:
+            print(f"Error in fallback method: {e}")
+            return []
+        
+        print(f"Fallback method found {len(all_actions)} storage actions")
+        return all_actions
     
     def export_to_excel(self, data: List[Dict], filename: str):
         """Export data to Excel file."""

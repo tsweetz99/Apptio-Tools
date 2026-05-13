@@ -1,0 +1,11 @@
+# Requirements for Turbonomic Rightsizing Report Generator
+
+# Core dependencies
+requests>=2.28.0
+
+# Optional dependencies for Excel export
+pandas>=1.5.0
+openpyxl>=3.0.0
+
+# Note: CSV export works without pandas/openpyxl
+# Install all with: pip install -r requirements.txt

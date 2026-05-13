@@ -1,0 +1,10 @@
+{
+  "auth_type": "cloudability",
+  "region": "",
+  "region_instructions": "Required field. The region is \"\" for US, \"au\" for Australia, \"eu\" for Europe, \"usgov\" for US Government",
+  "cldyKey": "",
+  "frontdoor_environment": "",
+  "public_key": "",
+  "private_key": "",
+  "instructions": "Fill in either cldyKey (for Cloudability auth) OR all of frontdoor_environment, public_key, and private_key (for Frontdoor auth). The region field is always required."
+}

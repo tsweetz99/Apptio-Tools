@@ -1,0 +1,8 @@
+# Requirements for Dashboard Dolly
+
+# Core dependencies
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Optional: For Frontdoor authentication
+# apptio_lib (internal IBM package)

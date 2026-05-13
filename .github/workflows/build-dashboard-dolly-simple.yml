@@ -59,6 +59,7 @@ jobs:
       - name: Create ZIP with proper .app bundle
         working-directory: cloudability/dashboard-dolly/dist
         run: |
+          xattr -cr DashboardDolly.app
           zip -r DashboardDolly-macOS.zip DashboardDolly.app
       
       - name: Upload

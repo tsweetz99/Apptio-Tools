@@ -56,10 +56,15 @@ jobs:
         run: |
           pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments:Environments" --osx-bundle-identifier=com.ibm.dashboarddolly dashboard_dolly_gui.py
       
+      - name: Create ZIP with proper .app bundle
+        working-directory: cloudability/dashboard-dolly/dist
+        run: |
+          zip -r DashboardDolly-macOS.zip DashboardDolly.app
+      
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: DashboardDolly-macOS
-          path: cloudability/dashboard-dolly/dist/DashboardDolly.app/
+          path: cloudability/dashboard-dolly/dist/DashboardDolly-macOS.zip
 
 # Made with Bob

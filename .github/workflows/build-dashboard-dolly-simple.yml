@@ -1,0 +1,65 @@
+name: Build Dashboard Dolly (Simple)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    name: Build Windows
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller requests urllib3
+      
+      - name: Build
+        run: |
+          cd cloudability/dashboard-dolly
+          pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments;Environments" dashboard_dolly_gui.py
+      
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: DashboardDolly-Windows
+          path: cloudability/dashboard-dolly/dist/DashboardDolly/
+
+  build-macos:
+    name: Build macOS
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip3 install pyinstaller requests urllib3
+      
+      - name: Build
+        run: |
+          cd cloudability/dashboard-dolly
+          pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments:Environments" --osx-bundle-identifier=com.ibm.dashboarddolly dashboard_dolly_gui.py
+      
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: DashboardDolly-macOS
+          path: cloudability/dashboard-dolly/dist/DashboardDolly.app/
+
+# Made with Bob

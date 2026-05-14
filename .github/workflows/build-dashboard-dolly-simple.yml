@@ -27,11 +27,24 @@ jobs:
         run: |
           pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments;Environments" dashboard_dolly_gui.py
       
+      - name: Create distribution package
+        working-directory: cloudability/dashboard-dolly
+        run: |
+          copy END_USER_GUIDE.md dist\DashboardDolly\
+          copy DISTRIBUTION_PACKAGE_README.md dist\DashboardDolly\README.md
+          mkdir dist\DashboardDolly\Environments\template
+          copy Environments\template\config.json dist\DashboardDolly\Environments\template\
+      
+      - name: Create ZIP
+        working-directory: cloudability/dashboard-dolly/dist
+        run: |
+          Compress-Archive -Path DashboardDolly -DestinationPath DashboardDolly-Windows.zip
+      
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: DashboardDolly-Windows
-          path: cloudability/dashboard-dolly/dist/DashboardDolly/
+          path: cloudability/dashboard-dolly/dist/DashboardDolly-Windows.zip
 
   build-macos:
     name: Build macOS
@@ -56,11 +69,15 @@ jobs:
         run: |
           pyinstaller --name=DashboardDolly --windowed --onedir --add-data="Environments:Environments" --osx-bundle-identifier=com.ibm.dashboarddolly dashboard_dolly_gui.py
       
-      - name: Create ZIP with proper .app bundle
+      - name: Create distribution package
         working-directory: cloudability/dashboard-dolly/dist
         run: |
+          cp ../END_USER_GUIDE.md .
+          cp ../DISTRIBUTION_PACKAGE_README.md ./README.md
+          mkdir -p Environments/template
+          cp ../Environments/template/config.json Environments/template/
           xattr -cr DashboardDolly.app
-          zip -r DashboardDolly-macOS.zip DashboardDolly.app
+          zip -r DashboardDolly-macOS.zip DashboardDolly.app END_USER_GUIDE.md README.md Environments
       
       - name: Upload
         uses: actions/upload-artifact@v4

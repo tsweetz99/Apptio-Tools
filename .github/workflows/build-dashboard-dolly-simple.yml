@@ -72,12 +72,14 @@ jobs:
       - name: Create distribution package
         working-directory: cloudability/dashboard-dolly/dist
         run: |
-          cp ../END_USER_GUIDE.md .
-          cp ../DISTRIBUTION_PACKAGE_README.md ./README.md
-          mkdir -p Environments/template
-          cp ../Environments/template/config.json Environments/template/
-          xattr -cr DashboardDolly.app
-          zip -r DashboardDolly-macOS.zip DashboardDolly.app END_USER_GUIDE.md README.md Environments
+          mkdir -p DashboardDolly-Package
+          cp -R DashboardDolly.app DashboardDolly-Package/
+          cp ../END_USER_GUIDE.md DashboardDolly-Package/
+          cp ../DISTRIBUTION_PACKAGE_README.md DashboardDolly-Package/README.md
+          mkdir -p DashboardDolly-Package/Environments/template
+          cp ../Environments/template/config.json DashboardDolly-Package/Environments/template/
+          xattr -cr DashboardDolly-Package/DashboardDolly.app
+          cd DashboardDolly-Package && zip -r ../DashboardDolly-macOS.zip . && cd ..
       
       - name: Upload
         uses: actions/upload-artifact@v4
